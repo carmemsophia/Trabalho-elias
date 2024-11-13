@@ -1,0 +1,35 @@
+
+/* importa as fontes poppins e Cormorant SC (google) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Poppins:wght@400;700&display=swap');
+
+/* definição de variaveis */
+:root {
+    /* fontes */
+     --fonte-principal: "Poppins", sans-serif;
+     --fonte-segundaria: "Cormorant SC", serif;
+
+    /* paletas de cores */
+    --cor-principal: #50C878;
+    --cor-segundaria: #333333;
+    --cor-principal-alpha: #50c87841;
+    --cor-gradiente-01: #acf8c5;
+    --cor-gradiente-02: #aaaaaa;
+    --cor-01: #f9f9f9;
+    --cor-02: #b8c6c7;
+    --cor-03: #767f86;
+    --cor-04: #3c4852;
+    --cor-05: #00000043;
+}
+
+/* limpa as configurações padroes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: var(--fonte-principal);
+    fonte-size: 18px;
+}
