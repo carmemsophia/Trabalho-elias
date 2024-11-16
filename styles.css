@@ -1,12 +1,11 @@
-
 /* importa as fontes poppins e Cormorant SC (google) */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Poppins:wght@400;700&display=swap');
 
 /* definição de variaveis */
 :root {
     /* fontes */
-     --fonte-principal: "Poppins", sans-serif;
-     --fonte-segundaria: "Cormorant SC", serif;
+    --fonte-principal: "Poppins", sans-serif;
+    --fonte-segundaria: "Cormorant SC", serif;
 
     /* paletas de cores */
     --cor-principal: #50C878;
@@ -32,5 +31,50 @@
 html {
     font-family: var(--fonte-principal);
     fonte-size: 18px;
-    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--cor-04);
+
+}
+
+
+/* ===== Barra de navegação fixa, com Menu ===== */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--cor-principal);
+    padding: 0.6rem 3rem;
+    color: var(--cor-01);
+    letter-spacing: 0.1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-family: var(--fonte-segundaria);
+    font-size: 1, 5rem;
+
+}
+
+.Menu a {
+    text-decoration: none;
+    color: var(--cor-01);
+    font-weight: 700;
+    border: solid 1p var(--cor-05);
+    transition: 0.5s;
+
+}
+
+.Menu a:hover {
+    color: var(--cor-segundaria);
 }
