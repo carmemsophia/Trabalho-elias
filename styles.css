@@ -17,7 +17,7 @@
     --cor-02: #b8c6c7;
     --cor-03: #767f86;
     --cor-04: #3c4852;
-    --cor-05: #00000043;
+    --cor-05: #000000;
 }
 
 /* limpa as configurações padroes */
@@ -37,11 +37,94 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: var(--cor-01);
-    background-image: url(imagens/WhatsApp\ Image\ 2024-11-18\ at\ 16.52.12.jpeg);
+    color: var(--cor-05);
+    background-image: url();
     background-size: cover;
     background-position: 65%;
     height: 60vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main {
+    width: 100%;
+}
+
+.Faq {
+    width: 1000px;
+}
+
+.Faq h1 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+
+.perguntas {
+    width: 100%;
+    list-style: none;
+}
+
+.perguntas li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.perguntas li label {
+    padding: 15px 10px;
+    font-size: 18x;
+    background-color: #acf8c5;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.perguntas li label span {
+    display: inline-block;
+    padding: 8px;
+    background-color: #3c4852;
+    color: #fafafa;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.perguntas input[type=radio] {
+    display: none;
+}
+
+.perguntas .resposta {
+    color: var(--cor-04);
+    padding: 0 14px;
+    background-color: #acf8c5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s, padding .5s;
+}
+
+.perguntas input[type=radio]:checked+label+.resposta {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+/*ESTILO DO PORTFOLIO*/
+
+section.portfolio {
+    width: 100%;
+}
+
+section.portfolio .flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-port {
+    width: 300px;
+    height: 360px;
+    background-color: var(--cor-principal-alpha);
 }
 
 
@@ -73,7 +156,7 @@ nav {
     text-decoration: none;
     color: var(--cor-01);
     font-weight: 700;
-    border: solid 1p var(--cor-05);
+    border: solid 1p var(--cor-04);
     transition: 0.5s;
 
 }
@@ -121,7 +204,7 @@ form .btn-enviar {
 form .btn-enviar input {
     width: 120px;
     background-color: #dbdbdb;
-    color: #333333;
+    color: var(--cor-05);
     font-weight: 700;
     cursor: pointer;
     transition: 2s;
