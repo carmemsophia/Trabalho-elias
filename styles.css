@@ -1,13 +1,13 @@
-/* importa as fontes poppins e Cormorant SC (google) */
+/* ========================== Importação de Fontes ========================== */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Poppins:wght@400;700&display=swap');
 
-/* definição de variaveis */
+/* ========================== Variáveis ========================== */
 :root {
-    /* fontes */
+    /* Fontes */
     --fonte-principal: "Poppins", sans-serif;
     --fonte-segundaria: "Cormorant SC", serif;
 
-    /* paletas de cores */
+    /* Paletas de Cores */
     --cor-principal: #50C878;
     --cor-segundaria: #333333;
     --cor-principal-alpha: #50c87841;
@@ -20,7 +20,7 @@
     --cor-05: #000000;
 }
 
-/* limpa as configurações padroes */
+/* ========================== Reset ========================== */
 * {
     margin: 0;
     padding: 0;
@@ -30,28 +30,27 @@
 
 html {
     font-family: var(--fonte-principal);
-    fonte-size: 18px;
+    font-size: 18px;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: var(--cor-05);
-    background-image: url();
-    background-size: cover;
-    background-position: 65%;
-    height: 60vh;
+    color: var(--cor-principal);
+}
+
+/* ========================== Geral ========================== */
+main {
     width: 100%;
-    height: 100vh;
+}
+
+/* ========================== Estilo da Página de FAQ ========================== */
+body.Faq {
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-
-main {
-    width: 100%;
+    height: 100vh;
+    background-image: url();
+    background-size: cover;
+    background-position: 65%;
 }
 
 .Faq {
@@ -63,27 +62,26 @@ main {
     margin-bottom: 60px;
 }
 
-.perguntas {
+.Faq .perguntas {
     width: 100%;
     list-style: none;
 }
 
-.perguntas li {
+.Faq .perguntas li {
     width: 100%;
     margin-bottom: 10px;
 }
 
-.perguntas li label {
+.Faq .perguntas li label {
     padding: 15px 10px;
-    font-size: 18x;
+    font-size: 18px;
     background-color: #acf8c5;
-
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.perguntas li label span {
+.Faq .perguntas li label span {
     display: inline-block;
     padding: 8px;
     background-color: #3c4852;
@@ -92,25 +90,28 @@ main {
     margin-right: 10px;
 }
 
-.perguntas input[type=radio] {
+.Faq .perguntas input[type="radio"] {
     display: none;
 }
 
-.perguntas .resposta {
+.Faq .perguntas .resposta {
     color: var(--cor-04);
     padding: 0 14px;
     background-color: #acf8c5;
     max-height: 0;
     overflow: hidden;
-    transition: max-height .5s, padding .5s;
+    transition: max-height 0.5s, padding 0.5s;
 }
 
-.perguntas input[type=radio]:checked+label+.resposta {
+.Faq .perguntas input[type="radio"]:checked+label+.resposta {
     max-height: 400px;
     padding: 10px 10px 20px;
 }
 
-/*ESTILO DO PORTFOLIO*/
+/* ========================== Estilo do Portfólio ========================== */
+body.portfolio {
+    background-color: #f4f4f4;
+}
 
 section.portfolio {
     width: 100%;
@@ -119,22 +120,45 @@ section.portfolio {
 section.portfolio .flex {
     display: flex;
     justify-content: space-around;
+    margin-top: 80px;
 }
 
-.img-port {
+.portfolio .img-port {
     width: 300px;
     height: 360px;
-    background-color: var(--cor-principal-alpha);
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 3s;
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
 }
 
+.portfolio .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
 
-/* ===== Barra de navegação fixa, com Menu ===== */
+.portfolio .img-port:hover {
+    background-position: 100% 100%;
+}
+
+/* ========================== Estilo da Navegação ========================== */
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     background-color: var(--cor-principal);
     padding: 0.6rem 3rem;
     color: var(--cor-01);
@@ -146,26 +170,28 @@ nav {
     left: 0;
 }
 
-.logo {
+nav .logo {
     font-family: var(--fonte-segundaria);
-    font-size: 1, 5rem;
-
+    font-size: 1.5rem;
 }
 
-.Menu a {
+nav .Menu a {
     text-decoration: none;
     color: var(--cor-01);
     font-weight: 700;
-    border: solid 1p var(--cor-04);
+    border: solid 1px var(--cor-04);
     transition: 0.5s;
-
 }
 
-.Menu a:hover {
+nav .Menu a:hover {
     color: var(--cor-segundaria);
 }
 
-/*ESTILO DO FORMULÁRIO DE CONTATO*/
+/* ========================== Estilo do Formulário ========================== */
+body.formulario {
+    background-color: var(--cor-01);
+}
+
 section.formulario {
     padding: 80px 4%;
 }
@@ -208,4 +234,152 @@ form .btn-enviar input {
     font-weight: 700;
     cursor: pointer;
     transition: 2s;
+}
+
+
+
+/* === Estilo para a Página de Blog === */
+body.blog {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilo do cabeçalho */
+body.blog header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+body.blog header .menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+body.blog header .menu a:hover {
+    text-decoration: underline;
+}
+
+/* Título principal */
+body.blog h1 {
+    text-align: center;
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+}
+
+/* Texto de introdução */
+body.blog main p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Estilo da lista de artigos */
+body.blog ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+body.blog ul li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.blog ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.blog ul li a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+body.blog ul li a:hover {
+    text-decoration: underline;
+}
+
+body.blog ul li p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Rodapé */
+body.blog footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.blog1 {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.hearde {
+    padding: 40px 4%;
+}
+
+hearde>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.topo-de-site {
+    padding: 40px 4%;
+
+}
+
+section.topo-de-site.flex {
+    align-items: center;
+    justify-content: center;
 }
