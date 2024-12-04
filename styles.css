@@ -111,7 +111,7 @@ body.Faq {
 
 /* ========================== Estilo do Portfólio ========================== */
 body.portfolio {
-    background-color: #f4f4f4;
+    background-color: #fff;
 }
 
 section.portfolio {
@@ -356,6 +356,14 @@ main .texto {
     flex-direction: column; /* Alinha o título e o texto em coluna */
     justify-content: center; /* Centraliza o conteúdo verticalmente */
     text-align: right; /* Alinhamento do texto à esquerda */
+}
+.container{
+   display: flex;
+   align-items: flex-start;
+   gap: 15px;
+}
+.jusficado{
+    text-decoration: auto;
 }
 
 main h1 {

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,24 +6,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviço 1</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo geral */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+header {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+}
+
+nav .logo {
+    font-family: var(--fonte-segundaria);
+    font-size: 1.5rem;
+}
+
+nav .Menu a {
+    text-decoration: none;
+    color: var(--cor-01);
+    font-weight: 700;
+    border: none;
+    transition: 0.5s;
+}
+
+nav .Menu a:hover {
+    color: var(--cor-segundaria);
+        }
+
+        /* Título principal */
+        main h1 {
+            color: #131313;
+            font-size: 28px;
+            margin: 20px 0;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main p {
+            margin: 20px auto;
+            max-width: 800px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Imagem do logotipo */
+        header img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            header nav .Menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            main p {
+                padding: 0 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-
         <nav>
-            <div class=":logo">MAACY SITE</div>
+            <div><img src="imagens/logo.jpeg" width="40" height="40" /></div>
+            <div class="logo">MAACY SITE</div>
             <div class="Menu">
-            <a href="index.html">Home</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="servico.html">Serviços</a>
-            <a href="suporte.html">Suporte</a>
-            <a href="portfolio.html">Portfólio</a>
+                <a href="index.html">Home</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="servico.html">Serviços</a>
+                <a href="suporte.html">Suporte</a>
+                <a href="portfolio.html">Portfólio</a>
+            </div>
         </nav>
     </header>
     <main>
-        <center><h1>Criação de Sites Personalizados</h1></center>
+        <center>
+            <h1>Criação de Sites Personalizados</h1>
+        </center>
         <p>Criamos sites exclusivos, desenhados especialmente para atender às necessidades do seu negócio. Seja um site
             institucional, e-commerce, blog ou landing page, trabalhamos de perto com você para entender suas metas e
             garantir que o design, funcionalidades e conteúdo sejam ideais para o seu público-alvo. Todos os sites são
